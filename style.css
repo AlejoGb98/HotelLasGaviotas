@@ -140,11 +140,9 @@
     .btn-primary {
       background: #bba737;
       color: #000;
-      border: none;
       padding: 14px 38px;
       font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
+      font-weight: 500;
       cursor: pointer;
       transition: all 0.25s;
       text-decoration: none;
@@ -152,7 +150,7 @@
     }
 
     .btn-primary:hover {
-        scale: 1.1;
+        scale: 1.05;
         box-shadow: 0 0px 12px #bba737;
     }
 
@@ -280,27 +278,25 @@
 
     .stats {
       display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
+      gap: 24px;
+      color: #bba737;
     }
 
     .stat-item {
-      background: #bba737;
-      padding: 8px 30px 8px 24px;
-      border-radius: 60px;
-      font-weight: 500;
+      font-weight: 300;
       display: flex;
-      align-items: center;
-      gap: 8px;
+      flex-direction: column;
+      gap: 4px;
     }
 
     .stat-item i {
-      color: #1d6b7a;
-      font-size: 1.2rem;
+      font-size: 1rem;
+      font-weight: 200;
     }
+
     .stat-item strong {
       font-size: 1.3rem;
-      margin-right: 4px;
+      font-weight: 600;
     }
 
     .history-image {
@@ -348,8 +344,8 @@
       background-color: #bba737;
       border: none;
       padding: 16px 44px;
-      font-size: 1.2rem;
-      font-weight: 600;
+      font-size: 1rem;
+      font-weight: 500;
       cursor: pointer;
       transition: 0.2s;
      
