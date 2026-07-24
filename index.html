@@ -3,9 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Hotel Las Gaviotas</title>
 </head>
 <body>
-    
+    <div class="container">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">
+        <p>
+            Las Gaviotas 
+        </p>
+        <strong>
+            HOTEL & SPA
+        </strong>
+      </div>
+      <div class="nav-links">
+        <a href="#">INICIO</a>
+        <a href="#">HABITACIONES</a>
+        <a href="#">SERVICIOS</a>
+        <a href="#">GALERÍA</a>
+        <a href="#">CONTACTO</a>
+        <a href="#" class="reservar-btn">RESERVAR</a>
+      </div>
+    </nav>
+
+    <!-- SECCIÓN 1: Hero (Landing 1) -->
+    <section class="hero">
+      <div class="hero-badge">BIENVENIDOS A</div>
+        <h1><span>Las Gaviotas</span></h1>
+        <div class="hero-sub">“Donde el mar te da la bienvenida”</div>
+        <p class="hero-description">
+            Ubicado frente al Atlántico, Hotel Las Gaviotas ofrece una experiencia de descanso única con habitaciones de primera categoría, gastronomía local y la calidez de nuestro equipo. Un refugio costero pensado para que cada visita se convierta en un recuerdo imborrable.
+        </p>
+        <div class="hero-actions">
+            <a href="#" class="btn-primary">REALIZAR UNA RESERVA</a>
+            <!-- <a href="#" class="btn-outline">DESCUBRIR</a> -->
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: Lo que ofrecemos (Landing 2) -->
+    <section class="section-offer">
+      <div class="section-title">LO QUE OFRECEMOS</div>
+      <div class="section-headline"><strong>Experiencias</strong> Únicas</div>
+
+      <div class="offer-grid">
+        <div class="offer-item">
+          <i class="fas fa-bed"></i>
+          <h3>Habitaciones Premium</h3>
+          <p>Suites y habitaciones diseñadas con vistas al océano, amenities de lujo y atención personalizada.</p>
+        </div>
+        <div class="offer-item">
+          <i class="fas fa-utensils"></i>
+          <h3>Gastronomía Local</h3>
+          <p>Restaurante con vista al mar, cocina de autor basada en productos frescos de la región.</p>
+        </div>
+        <div class="offer-item">
+          <i class="fas fa-map-pin"></i>
+          <h3>Ubicación Privilegiada</h3>
+          <p>A pasos de la playa, con acceso directo al mar y los mejores atardeceres de la costa.</p>
+        </div>
+        <div class="offer-item">
+          <i class="fas fa-spa"></i>
+          <h3>Spa & Bienestar</h3>
+          <p>Centro de spa con piscina climatizada, masajes y tratamientos para el cuerpo y la mente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: Historia (Landing 3) -->
+    <section class="section-history">
+      <div class="history-wrap">
+        <div class="history-content">
+          <div class="section-title">NUESTRA HISTORIA</div>
+          <h2><strong>Un refugio</strong> junto al Atlántico desde 1987</h2>
+          <p>
+            Hotel Las Gaviotas nació del sueño de ofrecer hospitalidad auténtica en uno de los rincones más hermosos de la costa. Con 37 habitaciones cuidadosamente equipadas, cada espacio está diseñado para que nuestros huéspedes descansen, se reconecten y disfruten del paisaje costero. <br><br>
+            Contamos con atención personalizada, cocina de autor, salón de eventos y acceso directo a la playa. Somos más que un hotel — somos el hogar que te espera junto al mar.
+          </p>
+          <div class="stats">
+            <div class="stat-item"><i class="fas fa-door-open"></i> <strong>37</strong> HABITACIONES</div>
+            <div class="stat-item"><i class="fas fa-star"></i> <strong>4.9★</strong> VALORACIÓN</div>
+            <div class="stat-item"><i class="fas fa-calendar-alt"></i> <strong>35+</strong> AÑOS DE HISTORIA</div>
+          </div>
+        </div>
+        <div class="history-image">
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: CTA + Footer (Landing 4) -->
+    <section class="section-cta">
+      <div class="cta-card">
+        <div class="cta-text">
+          <h3>¿Listo para tu escapada?</h3>
+          <p>Realizá tu solicitud de reserva en minutos. Nuestro equipo confirmará la disponibilidad y te acompañará en cada paso para que tu estadía sea perfecta.</p>
+        </div>
+        <button class="cta-btn">SOLICITAR RESERVA</button>
+      </div>
+
+      <footer class="footer">
+        <div>
+          <p>Hotel Las Gaviotas<span> <br>Frente al mar desde 1987</span></p>
+        </div>
+        <div class="footer-links">
+          <a href="#">HABITACIONES</a>
+          <a href="#">SERVICIOS</a>
+          <a href="#">GALERÍA</a>
+          <a href="#">CONTACTO</a>
+        </div>
+        <div>
+          <small><i class="far fa-copyright"></i> 2025 Hotel Las Gaviotas. Todos los derechos reservados.</small>
+        </div>
+      </footer>
+    </section>
+
+  </div> <!-- container -->
+
+  <!-- pequeño JS para interacción (vanilla) -->
+  <script>
+    (function() {
+      console.log('Las Gaviotas · landing ready');
+      // Ejemplo: alerta en reserva (solo demo)
+      const reservarBtns = document.querySelectorAll('.btn-primary, .cta-btn, .reservar-btn');
+      reservarBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          alert('🧳 Reserva simulada · ¡Gracias por elegir Las Gaviotas!');
+        });
+      });
+      // botón descubrir
+      const descubrir = document.querySelector('.btn-outline');
+      if(descubrir) {
+        descubrir.addEventListener('click', function(e) {
+          e.preventDefault();
+          alert('🌊 Descubre más sobre Las Gaviotas · próximamente');
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

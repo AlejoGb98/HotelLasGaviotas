@@ -1,0 +1,433 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', system-ui, sans-serif;
+      background-color: #020517;
+      color: #f3f3f3;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 0 18px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: #bba737;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .logo strong {
+      font-size: small;
+      font-weight: 200;
+      color: #bba737;
+    }
+    .logo small {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #bba737;
+      margin-left: 6px;
+      letter-spacing: 0.1em;
+    }
+
+    .nav-links {
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #f3f3f3;
+      transition: color 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 6px;
+    }
+
+    .nav-links .reservar-btn {
+      color: #bba737;
+      border: 1px solid #bba737;
+      padding: 6px 18px;
+      font-weight: 600;
+      transition: all;
+      transition-duration: 200ms;
+    }
+
+    .nav-links .reservar-btn:hover {
+      scale: 1.1;
+      background-color: #bba737;
+      color: #020517;
+    }
+
+    /* ---------- SECCIÓN 1 : HERO (Landing 1) ---------- */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 0 70px;
+      
+    }
+
+    .hero-badge {
+      margin:  auto;
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      color: #bba737;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    .hero h1 {
+      font-size: 4.8rem;
+      font-weight: 300;
+      line-height: 1.1; 
+      color: #f3f3f3;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 span {
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .hero-sub {
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: #bba737;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      font-style: italic;
+    }
+
+    .hero-description {
+      max-width: 620px;
+      font-size: 1.1rem;
+      color: #f3f3f3;
+      margin-bottom: 38px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #bba737;
+      color: #000;
+      border: none;
+      padding: 14px 38px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: all 0.25s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+        scale: 1.1;
+        box-shadow: 0 0px 12px #bba737;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #1d6b7a;
+      color: #1d6b7a;
+      padding: 12px 36px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      background: #1d6b7a;
+      color: white;
+    }
+
+    /* ---------- SECCIÓN 2 : OFRECEMOS (Landing 2) ---------- */
+    .section-offer {
+      padding: 60px 30px;
+      border-radius: 20px;
+      margin-top: 10px;
+      box-shadow: 0 -10px 30px rgba(0,0,0,0.02);
+    }
+
+    .section-title {
+      font-size: 1rem;
+      color: #bba737;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 400;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .section-headline {
+      font-size: 2.8rem;
+      font-weight: 300;
+      margin-bottom: 44px;
+      text-align: center;
+    }
+    .section-headline strong {
+      font-weight: 600;
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .offer-item {
+      padding: 16px 22px 28px;
+      border-radius: 28px;
+      transition: all 0.2s;
+      border: 1px solid #dadc9b;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .offer-item:hover {
+      transform: translateY(-6px);
+    }
+    .offer-item i {
+      font-size: 2.4rem;
+      
+    }
+
+    .offer-item h3 {
+      font-size: 1.3rem;
+      color: #bba737;
+      font-weight: 600;
+      flex: 1;
+    }
+
+    .offer-item p {
+      margin: 12px auto 0 auto;
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    /* ---------- SECCIÓN 3 : HISTORIA (Landing 3) ---------- */
+    .section-history {
+      padding: 70px 0 60px;
+      margin-top: 10px;
+    }
+
+    .history-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .history-content {
+      flex: 1 1 55%;
+    }
+    .history-content .section-title {
+        text-align: left;
+        color: #bba737;
+        margin-bottom: 6px;
+    }
+    .history-content h2 {
+      font-size: 3rem;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      ;
+    }
+    .history-content h2 strong {
+      font-weight: 600;
+    }
+    .history-content p {
+      font-size: 1.05rem;
+      max-width: 580px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      background: #bba737;
+      padding: 8px 30px 8px 24px;
+      border-radius: 60px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stat-item i {
+      color: #1d6b7a;
+      font-size: 1.2rem;
+    }
+    .stat-item strong {
+      font-size: 1.3rem;
+      margin-right: 4px;
+    }
+
+    .history-image {
+      flex: 1 1 35%;
+      background: #cbdde3;
+      height: 600px;
+      border-radius: 60px 20px 60px 20px;
+      background-image: url('https://images.pexels.com/photos/18118994/pexels-photo-18118994.jpeg?_gl=1*1dcz9xi*_ga*MTgxMzQ1MDE1OS4xNzg0ODUzNjc1*_ga_8JE65Q40S6*czE3ODQ4NTM2NzQkbzEkZzEkdDE3ODQ4NTM3MDkkajI1JGwwJGgw');
+      background-size: cover;
+      background-position: center;
+      min-height: 200px;
+    }
+
+    /* ---------- SECCIÓN 4 : RESERVA / FOOTER (Landing 4) ---------- */
+    .section-cta {
+      padding: 70px 0 40px;
+      border-radius: 40px 40px 0 0;
+      margin-top: 10px;
+    }
+
+    .cta-card {
+      margin: 20px 0;
+     
+      text-align: center;
+      border-radius: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .cta-text h3 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .cta-text p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      max-width: 650px;
+    }
+
+    .cta-btn {
+      background-color: #bba737;
+      border: none;
+      padding: 16px 44px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+     
+    }
+    .cta-btn:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0px 12px #bba737;
+    }
+
+    /* footer */
+    .footer {
+      margin-top: 60px;
+      padding: 30px 0 20px;
+      border-top: 1px solid #dde9ed;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #3d5b64;
+    }
+
+    .footer div{
+        p{
+            font-weight: 400;
+            color: #bba737
+        }
+
+        span{
+            color: #2d464e;
+        }
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #1e3b44;
+      margin: 0 18px 0 0;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+    .footer-links a:hover {
+      color: #bba737;
+    }
+
+    .footer small {
+      font-size: 0.85rem;
+    }
+    .footer i {
+      margin-right: 6px;
+    }
+
+    /* separadores visuales */
+    .section-divider {
+      height: 2px;
+      margin: 0 40px;
+      opacity: 0.3;
+    }
+
+    /* imagen placeholder (se reemplaza con href) */
+    .img-placeholder {
+      background: #d4e2e8;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2d464e;
+      font-weight: 300;
+    }
+
+    /* ajustes */
+    @media (max-width: 1024px) {
+      .offer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero h1 { font-size: 3.8rem; }
+    }
+    @media (max-width: 700px) {
+      .container { padding: 0 20px; }
+      .nav-links { gap: 1.2rem; font-size: 0.8rem; }
+      .hero h1 { font-size: 2.8rem; }
+    }
