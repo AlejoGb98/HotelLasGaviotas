@@ -1,148 +1,415 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Hotel Las Gaviotas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hotel Las Gaviotas: habitaciones, servicios y reservas frente al mar.">
+  <title>Hotel Las Gaviotas</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="container">
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand__mark" aria-hidden="true">⌁</span>
+      <span>
+        <strong>Las Gaviotas</strong>
+        <small>Hotel &amp; Spa</small>
+      </span>
+    </a>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="logo">
-        <p>
-            Las Gaviotas 
-        </p>
-        <strong>
-            HOTEL & SPA
-        </strong>
-      </div>
-      <div class="nav-links">
-        <a href="#">INICIO</a>
-        <a href="#">HABITACIONES</a>
-        <a href="#">SERVICIOS</a>
-        <a href="#">GALERÍA</a>
-        <a href="#">CONTACTO</a>
-        <a href="#" class="reservar-btn">RESERVAR</a>
-      </div>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#habitaciones">Habitaciones</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
     </nav>
 
-    <!-- SECCIÓN 1: Hero (Landing 1) -->
-    <section class="hero">
-      <div class="hero-badge">BIENVENIDOS A</div>
-        <h1><span>Las Gaviotas</span></h1>
-        <div class="hero-sub">“Donde el mar te da la bienvenida”</div>
-        <p class="hero-description">
-            Ubicado frente al Atlántico, Hotel Las Gaviotas ofrece una experiencia de descanso única con habitaciones de primera categoría, gastronomía local y la calidez de nuestro equipo. Un refugio costero pensado para que cada visita se convierta en un recuerdo imborrable.
+    <a class="button button--outline header-cta" href="#reservas">Reservar</a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__scenery" aria-hidden="true">
+        <span class="hero__sun"></span>
+        <span class="hero__hotel"></span>
+      </div>
+
+      <div class="hero__content container">
+        <span class="hero__logo" aria-hidden="true">⌁</span>
+        <p class="eyebrow">Bienvenidos a</p>
+        <h1>Las Gaviotas</h1>
+        <p class="hero__slogan">“Donde el mar te da la bienvenida”</p>
+        <p class="hero__description">
+          Un refugio frente al Atlántico con habitaciones confortables,
+          gastronomía local y una atención pensada para descansar.
         </p>
-        <div class="hero-actions">
-            <a href="#" class="btn-primary">REALIZAR UNA RESERVA</a>
-            <!-- <a href="#" class="btn-outline">DESCUBRIR</a> -->
+        <a class="button button--gold" href="#reservas">Realizar una reserva</a>
       </div>
     </section>
 
-    <!-- SECCIÓN 2: Lo que ofrecemos (Landing 2) -->
-    <section class="section-offer">
-      <div class="section-title">LO QUE OFRECEMOS</div>
-      <div class="section-headline"><strong>Experiencias</strong> Únicas</div>
+    <section class="section section--intro">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Lo que ofrecemos</p>
+          <h2>Experiencias únicas</h2>
+        </div>
 
-      <div class="offer-grid">
-        <div class="offer-item">
-          <i class="fas fa-bed"></i>
-          <h3>Habitaciones Premium</h3>
-          <p>Suites y habitaciones diseñadas con vistas al océano, amenities de lujo y atención personalizada.</p>
-        </div>
-        <div class="offer-item">
-          <i class="fas fa-utensils"></i>
-          <h3>Gastronomía Local</h3>
-          <p>Restaurante con vista al mar, cocina de autor basada en productos frescos de la región.</p>
-        </div>
-        <div class="offer-item">
-          <i class="fas fa-map-pin"></i>
-          <h3>Ubicación Privilegiada</h3>
-          <p>A pasos de la playa, con acceso directo al mar y los mejores atardeceres de la costa.</p>
-        </div>
-        <div class="offer-item">
-          <i class="fas fa-spa"></i>
-          <h3>Spa & Bienestar</h3>
-          <p>Centro de spa con piscina climatizada, masajes y tratamientos para el cuerpo y la mente.</p>
+        <div class="benefits-grid">
+          <article class="benefit">
+            <span aria-hidden="true">◈</span>
+            <h3>Habitaciones premium</h3>
+            <p>Espacios cómodos, amenities seleccionados y vistas a la costa.</p>
+          </article>
+          <article class="benefit">
+            <span aria-hidden="true">♨</span>
+            <h3>Gastronomía local</h3>
+            <p>Cocina de autor preparada con productos frescos de la región.</p>
+          </article>
+          <article class="benefit">
+            <span aria-hidden="true">⌖</span>
+            <h3>Ubicación privilegiada</h3>
+            <p>A pasos de la playa y de los mejores atardeceres del lugar.</p>
+          </article>
+          <article class="benefit">
+            <span aria-hidden="true">✦</span>
+            <h3>Spa y bienestar</h3>
+            <p>Piscina climatizada, masajes y tratamientos de relajación.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN 3: Historia (Landing 3) -->
-    <section class="section-history">
-      <div class="history-wrap">
-        <div class="history-content">
-          <div class="section-title">NUESTRA HISTORIA</div>
-          <h2><strong>Un refugio</strong> junto al Atlántico desde 1987</h2>
-          <p>
-            Hotel Las Gaviotas nació del sueño de ofrecer hospitalidad auténtica en uno de los rincones más hermosos de la costa. Con 37 habitaciones cuidadosamente equipadas, cada espacio está diseñado para que nuestros huéspedes descansen, se reconecten y disfruten del paisaje costero. <br><br>
-            Contamos con atención personalizada, cocina de autor, salón de eventos y acceso directo a la playa. Somos más que un hotel — somos el hogar que te espera junto al mar.
-          </p>
-          <div class="stats">
-            <div class="stat-item"><i class="fas fa-door-open"></i> <strong>37</strong> HABITACIONES</div>
-            <div class="stat-item"><i class="fas fa-star"></i> <strong>4.9</strong> VALORACIÓN</div>
-            <div class="stat-item"><i class="fas fa-calendar-alt"></i> <strong>35+</strong> AÑOS DE HISTORIA</div>
+    <section class="section" id="habitaciones">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Alojamiento</p>
+          <h2>Nuestras habitaciones</h2>
+          <p>Cada espacio fue diseñado para ofrecer confort, privacidad y descanso.</p>
+        </div>
+
+        <div class="rooms-grid">
+          <article class="room-card">
+            <div class="photo photo--standard" role="img" aria-label="Habitación estándar">
+              <span class="photo__tag">Clásica</span>
+              <span class="photo__label">Habitación luminosa</span>
+            </div>
+            <div class="room-card__body">
+              <div class="room-card__title">
+                <h3>Habitación estándar</h3>
+                <strong>USD 120</strong>
+              </div>
+              <div class="room-card__facts">
+                <span>2 personas</span>
+                <span>22 m²</span>
+                <span>Por noche</span>
+              </div>
+              <ul class="check-list">
+                <li>Cama doble queen</li>
+                <li>Baño privado</li>
+                <li>Aire acondicionado</li>
+                <li>Wi-Fi gratuito</li>
+              </ul>
+              <a class="button button--outline" href="#reservas">Reservar</a>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <div class="photo photo--superior" role="img" aria-label="Habitación doble superior">
+              <span class="photo__tag">Más elegida</span>
+              <span class="photo__label">Vista parcial al mar</span>
+            </div>
+            <div class="room-card__body">
+              <div class="room-card__title">
+                <h3>Doble superior</h3>
+                <strong>USD 180</strong>
+              </div>
+              <div class="room-card__facts">
+                <span>3 personas</span>
+                <span>30 m²</span>
+                <span>Por noche</span>
+              </div>
+              <ul class="check-list">
+                <li>Cama king size</li>
+                <li>Vista parcial al mar</li>
+                <li>Minibar incluido</li>
+                <li>Servicio a la habitación</li>
+              </ul>
+              <a class="button button--outline" href="#reservas">Reservar</a>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <div class="photo photo--suite" role="img" aria-label="Suite con vista al mar">
+              <span class="photo__tag">Vista al mar</span>
+              <span class="photo__label">Balcón privado</span>
+            </div>
+            <div class="room-card__body">
+              <div class="room-card__title">
+                <h3>Suite junior</h3>
+                <strong>USD 250</strong>
+              </div>
+              <div class="room-card__facts">
+                <span>2 personas</span>
+                <span>42 m²</span>
+                <span>Por noche</span>
+              </div>
+              <ul class="check-list">
+                <li>Cama king premium</li>
+                <li>Balcón con vista al mar</li>
+                <li>Bañera de hidromasaje</li>
+                <li>Desayuno incluido</li>
+              </ul>
+              <a class="button button--outline" href="#reservas">Reservar</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="section-note">
+          * Los precios son orientativos y pueden variar según la temporada.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--alternate" id="servicios">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Servicios</p>
+          <h2>Servicios y comodidades</h2>
+        </div>
+
+        <div class="services-featured">
+          <article class="service-card">
+            <div class="photo photo--pool" role="img" aria-label="Piscina con vista al mar">
+              <span class="photo__label">Piscina climatizada</span>
+            </div>
+            <div>
+              <h3>Piscina y relax</h3>
+              <p>Área de descanso, reposeras y servicio de bebidas.</p>
+              <small>08:00 – 20:00</small>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="photo photo--breakfast" role="img" aria-label="Desayuno buffet">
+              <span class="photo__label">Productos locales</span>
+            </div>
+            <div>
+              <h3>Desayuno incluido</h3>
+              <p>Buffet completo, pastelería artesanal y opciones especiales.</p>
+              <small>07:00 – 10:30</small>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="photo photo--spa" role="img" aria-label="Spa y bienestar">
+              <span class="photo__label">Tratamientos y masajes</span>
+            </div>
+            <div>
+              <h3>Spa y bienestar</h3>
+              <p>Masajes, tratamientos corporales y bañera de hidromasaje.</p>
+              <small>09:00 – 21:00</small>
+            </div>
+          </article>
+        </div>
+
+        <div class="amenities">
+          <div><span>📶</span><strong>Wi-Fi gratuito</strong></div>
+          <div><span>❄️</span><strong>Aire acondicionado</strong></div>
+          <div><span>🅿️</span><strong>Estacionamiento</strong></div>
+          <div><span>🏖️</span><strong>Acceso a la playa</strong></div>
+          <div><span>🍽️</span><strong>Restaurante</strong></div>
+          <div><span>🛎️</span><strong>Servicio 24 horas</strong></div>
+          <div><span>♿</span><strong>Accesibilidad</strong></div>
+          <div><span>🐾</span><strong>Pet-friendly</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Galería</p>
+          <h2>Conocé el hotel</h2>
+          <p>Una vista rápida de los espacios que vas a disfrutar.</p>
+        </div>
+
+        <div class="gallery">
+          <div class="gallery__item gallery__item--wide photo photo--hotel">
+            <span>Exterior frente al mar</span>
+          </div>
+          <div class="gallery__item photo photo--suite">
+            <span>Habitaciones</span>
+          </div>
+          <div class="gallery__item photo photo--pool">
+            <span>Piscina</span>
+          </div>
+          <div class="gallery__item photo photo--breakfast">
+            <span>Gastronomía</span>
+          </div>
+          <div class="gallery__item gallery__item--wide photo photo--sunset">
+            <span>Atardeceres</span>
           </div>
         </div>
-        <div class="history-image">
+      </div>
+    </section>
 
+    <section class="section story">
+      <div class="container story__grid">
+        <div>
+          <p class="eyebrow">Nuestra historia</p>
+          <h2>Un refugio junto al Atlántico desde 1987</h2>
+          <p>
+            Las Gaviotas nació con la idea de ofrecer una hospitalidad cercana
+            en uno de los rincones más lindos de la costa uruguaya.
+          </p>
+          <div class="stats">
+            <div><strong>37</strong><span>Habitaciones</span></div>
+            <div><strong>4,9</strong><span>Valoración</span></div>
+            <div><strong>35+</strong><span>Años de historia</span></div>
+          </div>
+        </div>
+        <blockquote>
+          “La vista, la tranquilidad y la atención hicieron que nuestra estadía
+          fuera inolvidable.”
+          <cite>— María Eugenia, huésped</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section section--alternate" id="reservas">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Reservas</p>
+          <h2>Solicitar reserva</h2>
+          <p>Completá tus datos y nuestro equipo se comunicará para confirmar.</p>
+        </div>
+
+        <div class="booking-layout">
+          <form class="booking-form" action="#reservas" method="get">
+            <fieldset>
+              <legend>Datos del huésped</legend>
+              <div class="form-grid">
+                <label>
+                  Nombre y apellido *
+                  <input type="text" name="nombre" placeholder="Carolina Méndez" required>
+                </label>
+                <label>
+                  Teléfono *
+                  <input type="tel" name="telefono" placeholder="+598 99 123 456" required>
+                </label>
+                <label class="form-grid__full">
+                  Correo electrónico *
+                  <input type="email" name="correo" placeholder="carolina@ejemplo.com" required>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Detalles de la estadía</legend>
+              <div class="form-grid">
+                <label>
+                  Fecha de llegada *
+                  <input type="date" name="llegada" required>
+                </label>
+                <label>
+                  Fecha de salida *
+                  <input type="date" name="salida" required>
+                </label>
+                <label>
+                  Tipo de habitación *
+                  <select name="habitacion" required>
+                    <option value="">Seleccioná una opción</option>
+                    <option>Habitación estándar</option>
+                    <option>Doble superior</option>
+                    <option>Suite junior</option>
+                  </select>
+                </label>
+                <label>
+                  Cantidad de personas *
+                  <select name="personas" required>
+                    <option value="">Seleccioná</option>
+                    <option>1 persona</option>
+                    <option>2 personas</option>
+                    <option>3 personas</option>
+                    <option>4 personas</option>
+                  </select>
+                </label>
+                <label class="form-grid__full">
+                  Observaciones
+                  <textarea name="observaciones" rows="5" placeholder="Alergias, necesidades especiales, hora estimada de llegada..."></textarea>
+                </label>
+              </div>
+            </fieldset>
+
+            <button class="button button--gold button--full" type="submit">
+              Enviar solicitud
+            </button>
+            <p class="form-note">* Campos obligatorios. Formulario demostrativo.</p>
+          </form>
+
+          <aside class="booking-info">
+            <p class="eyebrow">Atención personalizada</p>
+            <h3>¿Preferís llamarnos?</h3>
+            <p>Podemos ayudarte a elegir la habitación adecuada.</p>
+            <a href="tel:+59899123456">+598 99 123 456</a>
+            <span>Todos los días · 08:00 a 20:00</span>
+            <hr>
+            <h3>Incluido en tu estadía</h3>
+            <ul class="check-list">
+              <li>Desayuno buffet</li>
+              <li>Wi-Fi en todo el hotel</li>
+              <li>Acceso a piscina</li>
+              <li>Estacionamiento</li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN 4: CTA + Footer (Landing 4) -->
-    <section class="section-cta">
-      <div class="cta-card">
-        <div class="cta-text">
-          <h3>¿Listo para tu escapada?</h3>
-          <p>Realizá tu solicitud de reserva en minutos. Nuestro equipo confirmará la disponibilidad y te acompañará en cada paso para que tu estadía sea perfecta.</p>
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Contacto</p>
+          <h2>Contacto y ubicación</h2>
+          <p>Estamos para ayudarte antes, durante y después de tu visita.</p>
         </div>
-        <button class="cta-btn">SOLICITAR RESERVA</button>
+
+        <div class="contact-grid">
+          <article>
+            <span aria-hidden="true">⌖</span>
+            <h3>Dirección</h3>
+            <p>Rambla 1234<br>Las Gaviotas, Montevideo<br>Uruguay</p>
+          </article>
+          <article>
+            <span aria-hidden="true">☎</span>
+            <h3>Teléfono</h3>
+            <p>099 123 456<br>+598 99 123 456</p>
+          </article>
+          <article>
+            <span aria-hidden="true">✉</span>
+            <h3>Correo</h3>
+            <p>contacto@lasgaviotas.com<br>info@lasgaviotas.com</p>
+          </article>
+          <article>
+            <span aria-hidden="true">◷</span>
+            <h3>Atención</h3>
+            <p>Recepción: 24 horas<br>Administración: 09:00–18:00</p>
+          </article>
+        </div>
       </div>
-
-      <footer class="footer">
-        <div>
-          <p>Hotel Las Gaviotas<span> <br>Frente al mar desde 1987</span></p>
-        </div>
-        <div class="footer-links">
-          <a href="#">HABITACIONES</a>
-          <a href="#">SERVICIOS</a>
-          <a href="#">GALERÍA</a>
-          <a href="#">CONTACTO</a>
-        </div>
-        <div>
-          <small><i class="far fa-copyright"></i> 2025 Hotel Las Gaviotas. Todos los derechos reservados.</small>
-        </div>
-      </footer>
     </section>
+  </main>
 
-  </div> <!-- container -->
-
-  <!-- pequeño JS para interacción (vanilla) -->
-  <script>
-    (function() {
-      console.log('Las Gaviotas · landing ready');
-      // Ejemplo: alerta en reserva (solo demo)
-      const reservarBtns = document.querySelectorAll('.btn-primary, .cta-btn, .reservar-btn');
-      reservarBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          alert('🧳 Reserva simulada · ¡Gracias por elegir Las Gaviotas!');
-        });
-      });
-      // botón descubrir
-      const descubrir = document.querySelector('.btn-outline');
-      if(descubrir) {
-        descubrir.addEventListener('click', function(e) {
-          e.preventDefault();
-          alert('🌊 Descubre más sobre Las Gaviotas · próximamente');
-        });
-      }
-    })();
-  </script>
+  <footer class="site-footer">
+    <div class="container site-footer__content">
+      <a class="brand" href="#inicio">
+        <span class="brand__mark" aria-hidden="true">⌁</span>
+        <span>
+          <strong>Las Gaviotas</strong>
+          <small>Frente al mar desde 1987</small>
+        </span>
+      </a>
+      <p>© 2026 Hotel Las Gaviotas. Sitio demostrativo.</p>
+    </div>
+  </footer>
 </body>
 </html>
