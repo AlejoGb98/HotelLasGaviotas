@@ -6,9 +6,8 @@
   <meta name="description" content="Hotel Las Gaviotas: habitaciones, servicios y reservas frente al mar.">
   <title>Hotel Las Gaviotas</title>
   <link rel="stylesheet" href="/style.css">
-  <script src="reservas.js"></script>
-</body>
 </head>
+
 <body>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Ir al inicio">
@@ -286,7 +285,7 @@
         </div>
 
         <div class="booking-layout">
-          <form class="booking-form" action="#reservas" method="get">
+          <form class="booking-form" action="#reservas" method="get" id="reserva">
             <fieldset>
               <legend>Datos del huésped</legend>
               <div class="form-grid">
@@ -413,5 +412,7 @@
       <p>© 2026 Hotel Las Gaviotas. Sitio demostrativo.</p>
     </div>
   </footer>
+
+   <script src="/src/core/reservas.js"></script>
 </body>
 </html>
