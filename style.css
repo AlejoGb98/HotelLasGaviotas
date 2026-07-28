@@ -206,9 +206,10 @@ h3 {
   overflow: hidden;
   place-items: center;
   isolation: isolate;
-  background:
-    linear-gradient(90deg, rgba(4, 11, 20, 0.86), rgba(7, 19, 34, 0.44)),
-    linear-gradient(180deg, #0b3157 0%, #0a2746 48%, #061522 100%);
+  background-image: url("https://images.pexels.com/photos/33791950/pexels-photo-33791950.jpeg"); 
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero::after {
@@ -216,11 +217,11 @@ h3 {
   z-index: -1;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(4, 11, 20, 0.42)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(4, 11, 20, 0.90)),
     repeating-linear-gradient(
       0deg,
       transparent 0,
-      transparent 52px,
+      transparent 60px,
       rgba(255, 255, 255, 0.012) 53px
     );
   content: "";
@@ -259,29 +260,6 @@ h3 {
   background: radial-gradient(circle, rgba(239, 200, 120, 0.2), transparent 68%);
 }
 
-.hero__hotel {
-  position: absolute;
-  right: 6%;
-  bottom: 16%;
-  width: min(46vw, 610px);
-  height: 210px;
-  transform: perspective(700px) rotateY(-4deg);
-  border: 1px solid rgba(244, 238, 229, 0.07);
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent 0 32px,
-      rgba(239, 200, 120, 0.08) 33px 49px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(3, 10, 18, 0.45) 0 29px,
-      rgba(153, 188, 209, 0.09) 30px 47px
-    ),
-    #08121d;
-  box-shadow: var(--shadow);
-  opacity: 0.64;
-}
 
 .hero__hotel::before {
   position: absolute;
@@ -429,103 +407,59 @@ h3 {
 }
 
 .photo--standard {
-  background:
-    linear-gradient(90deg, rgba(76, 65, 58, 0.86) 0 34%, transparent 35%),
-    linear-gradient(180deg, #705f53 0 57%, #b6a492 58% 61%, #e9dfd0 62%);
+  background-image:url("https://images.pexels.com/photos/36162677/pexels-photo-36162677.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
-.photo--standard::before {
-  top: 0;
-  left: 22%;
-  width: 7px;
-  height: 72%;
-  background: rgba(244, 238, 229, 0.18);
-  box-shadow:
-    22px 0 rgba(244, 238, 229, 0.12),
-    44px 0 rgba(244, 238, 229, 0.18),
-    66px 0 rgba(244, 238, 229, 0.12);
-}
 
 .photo--superior {
-  background:
-    radial-gradient(ellipse at 68% 65%, #f7f1e8 0 21%, transparent 22%),
-    radial-gradient(ellipse at 45% 62%, #efe7dc 0 17%, transparent 18%),
-    linear-gradient(130deg, #8c765b, #2f493f 38%, #beaa8b 39% 62%, #4c312b);
+  background-image:url("//images.pexels.com/photos/18368021/pexels-photo-18368021.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
-.photo--superior::before {
-  top: 5%;
-  right: 7%;
-  width: 48%;
-  height: 52%;
-  border-radius: 48% 48% 10% 10%;
-  background: repeating-linear-gradient(
-    105deg,
-    rgba(82, 50, 35, 0.75) 0 6px,
-    rgba(187, 146, 98, 0.55) 7px 14px
-  );
-}
+
 
 .photo--suite {
-  background:
-    linear-gradient(90deg, rgba(15, 32, 47, 0.1), transparent 40%),
-    linear-gradient(180deg, #7fc1d5 0 42%, #2f8196 43% 55%, #e7dac7 56% 70%, #a97f61 71%);
+  background-image: url("https://images.pexels.com/photos/6466496/pexels-photo-6466496.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.photo--suite::before {
-  top: 8%;
-  right: 12%;
-  width: 42%;
-  height: 50%;
-  border: 12px solid rgba(245, 239, 229, 0.65);
-  border-bottom-width: 20px;
-  background: linear-gradient(180deg, #75cbe4 0 55%, #1c6e8b 56%);
-}
 
 .photo--pool {
-  background:
-    linear-gradient(170deg, transparent 0 42%, rgba(240, 239, 224, 0.55) 43% 48%, transparent 49%),
-    linear-gradient(180deg, #d68d6e 0 30%, #5b4c68 31% 45%, #338ab5 46% 73%, #0d415e 74%);
+  background-image: url("https://images.pexels.com/photos/35023213/pexels-photo-35023213.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.photo--pool::before {
-  right: 16%;
-  bottom: 17%;
-  width: 38%;
-  height: 38%;
-  border: 8px solid rgba(247, 239, 224, 0.45);
-  transform: skew(-18deg);
-}
 
 .photo--breakfast {
-  background:
-    radial-gradient(circle at 28% 56%, #f4c85d 0 7%, #fff1b3 8% 14%, transparent 15%),
-    radial-gradient(circle at 67% 60%, #d9744d 0 6%, #f5eee3 7% 18%, transparent 19%),
-    radial-gradient(circle at 50% 50%, #9fb76b 0 8%, #ede3cf 9% 24%, transparent 25%),
-    linear-gradient(145deg, #8f795e, #31271f);
+    background-image: url("https://images.pexels.com/photos/27434921/pexels-photo-27434921.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .photo--spa {
-  background:
-    radial-gradient(ellipse at 56% 75%, rgba(232, 246, 240, 0.8) 0 25%, transparent 26%),
-    linear-gradient(180deg, #81bfd0 0 47%, #295e71 48% 57%, #9f8975 58%);
+  background-image:url("https://images.pexels.com/photos/27274134/pexels-photo-27274134.jpeg"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .photo--hotel {
-  background:
-    linear-gradient(180deg, transparent 0 52%, rgba(213, 161, 76, 0.11) 53%),
-    repeating-linear-gradient(
-      90deg,
-      rgba(8, 22, 37, 0.5) 0 28px,
-      rgba(239, 200, 120, 0.22) 29px 43px
-    ),
-    linear-gradient(180deg, #084574 0 48%, #051a2c 49%);
+  background-image: url("https://images.pexels.com/photos/19467071/pexels-photo-19467071.jpeg");
+  background-size: cover;
 }
 
 .photo--sunset {
-  background:
-    radial-gradient(circle at 68% 35%, #f4d486 0 6%, rgba(240, 135, 73, 0.52) 7% 20%, transparent 21%),
-    linear-gradient(180deg, #8b4c63 0 34%, #df8a5b 35% 54%, #123d5d 55% 72%, #071522 73%);
+  background-image: url("https://images.pexels.com/photos/19070888/pexels-photo-19070888.jpeg");
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .photo__tag {
