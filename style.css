@@ -964,7 +964,11 @@ textarea:focus {
   *::after {
     transition-duration: 0.01ms !important;
   }
-  .site-footer {
+}
+
+/* FOOTER */
+
+.site-footer {
   padding: 60px 0 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background-color: #040b14;
@@ -973,7 +977,7 @@ textarea:focus {
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 40px;
+  gap: 50px;
 }
 
 .footer-column h3 {
@@ -1029,5 +1033,4 @@ textarea:focus {
   .footer-bottom {
     flex-direction: column;
   }
-}
 }
