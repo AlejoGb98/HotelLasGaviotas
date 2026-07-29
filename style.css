@@ -23,6 +23,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--navy-900);
   color: var(--cream);
   font-family: Arial, Helvetica, sans-serif;
@@ -38,7 +39,9 @@ button {
 }
 
 img {
+  display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -715,6 +718,7 @@ input,
 select,
 textarea {
   width: 100%;
+  min-width: 0;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 0;
   outline: 0;
@@ -872,6 +876,17 @@ textarea:focus {
 }
 
 @media (max-width: 720px) {
+
+  .main-nav {
+  justify-content: center;
+  gap: 10px 18px;
+  padding: 12px 0 4px;
+}
+
+.main-nav a {
+  font-size: 0.7rem;
+}
+  
   h1 {
     font-size: clamp(3.1rem, 18vw, 5rem);
   }
@@ -1032,5 +1047,49 @@ textarea:focus {
 
   .footer-bottom {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .brand strong {
+    font-size: 1rem;
+  }
+
+  .brand small {
+    font-size: 0.55rem;
+  }
+
+  .header-cta {
+    min-height: 42px;
+    padding: 10px 12px;
+    font-size: 0.65rem;
+  }
+
+  .main-nav {
+    gap: 8px 14px;
+  }
+
+  .main-nav a {
+    font-size: 0.65rem;
+  }
+
+  .hero__description {
+    font-size: 0.95rem;
+  }
+
+  .room-card__facts {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .button--full {
+    width: 100%;
   }
 }
