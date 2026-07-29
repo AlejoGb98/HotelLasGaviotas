@@ -1036,3 +1036,252 @@ textarea:focus {
     width: 100%;
   }
 }
+
+/* OPINIONES DE HUÉSPEDES */
+
+.opinions-section {
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy-900),
+      var(--navy-850)
+    );
+}
+
+.opinions-heading {
+  max-width: 720px;
+}
+
+.opinions-heading > p:last-child {
+  color: var(--muted);
+}
+
+
+/* RESUMEN DE VALORACIONES */
+
+.opinions-summary {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  width: fit-content;
+  margin-bottom: 40px;
+  padding: 25px 30px;
+  border: 1px solid var(--panel-line);
+  background: rgba(4, 11, 20, 0.35);
+}
+
+.opinions-score {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.opinions-score > strong {
+  color: var(--gold-light);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3.3rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.opinions-score p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.opinions-stars,
+.opinion-card__stars {
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.opinions-bars {
+  display: grid;
+  gap: 5px;
+  min-width: 150px;
+}
+
+.score-row {
+  display: grid;
+  grid-template-columns: 28px 85px 15px;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.65rem;
+}
+
+.score-bar {
+  height: 6px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.score-bar span {
+  display: block;
+  height: 100%;
+  background: var(--gold);
+}
+
+
+/* LISTADO DE OPINIONES */
+
+.opinions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.opinion-card {
+  display: flex;
+  min-height: 300px;
+  padding: 25px;
+  border: 1px solid var(--panel-line);
+  background: var(--navy-850);
+  flex-direction: column;
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.opinion-card:hover {
+  border-color: var(--line);
+  transform: translateY(-3px);
+}
+
+.opinion-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.opinion-card__top time {
+  color: #68717d;
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
+.opinion-card__stars {
+  font-size: 0.85rem;
+}
+
+.opinion-card__stars .empty-star {
+  color: #4c535c;
+}
+
+.opinion-card blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #d9dce0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.87rem;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.opinion-card__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--panel-line);
+  background: transparent;
+}
+
+.opinion-card__footer strong,
+.opinion-card__footer small {
+  display: block;
+}
+
+.opinion-card__footer strong {
+  color: var(--gold-light);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+}
+
+.opinion-card__footer small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.65rem;
+}
+
+.opinion-card__footer > span {
+  max-width: 125px;
+  color: var(--gold);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+
+/* MENSAJE SIN OPINIONES */
+
+.opinions-empty {
+  padding: 50px 25px;
+  border: 1px solid var(--panel-line);
+  background: var(--navy-850);
+  text-align: center;
+}
+
+.opinions-empty h3 {
+  margin-bottom: 10px;
+  color: var(--gold-light);
+}
+
+.opinions-empty p {
+  margin: 0;
+  color: var(--muted);
+}
+
+
+/* TABLETS */
+
+@media (max-width: 980px) {
+  .opinions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* CELULARES */
+
+@media (max-width: 650px) {
+  .opinions-summary {
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .opinions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .opinions-bars {
+    width: 100%;
+  }
+
+  .score-row {
+    grid-template-columns: 28px 1fr 15px;
+  }
+
+  .opinion-card {
+    min-height: auto;
+  }
+
+  .opinion-card__footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .opinion-card__footer > span {
+    max-width: none;
+    text-align: left;
+  }
+}
