@@ -2,143 +2,134 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
-    name="description"
-    content="Administración de reservas del Hotel Las Gaviotas."
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
   >
 
   <title>Listado de reservas | Hotel Las Gaviotas</title>
 
-  <!-- CSS general de la página -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- CSS exclusivo del listado -->
   <link rel="stylesheet" href="reservas.css">
+
+  <script src="listado-reservas.js" defer></script>
 </head>
 
-<body>
+<body class="admin-page">
 
-  <header class="site-header">
-
-    <a class="brand" href="index.html" aria-label="Ir al inicio">
-      <span class="brand__mark" aria-hidden="true">⌁</span>
-
-      <span>
-        <strong>Las Gaviotas</strong>
-        <small>Hotel &amp; Spa</small>
-      </span>
+  <header class="admin-header">
+    <a href="index.html" class="admin-brand">
+      <span>Hotel</span>
+      <strong>Listado de Reservas</strong>
     </a>
 
-    <nav class="main-nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="index.html#habitaciones">Habitaciones</a>
-      <a href="index.html#servicios">Servicios</a>
-      <a href="index.html#galeria">Galería</a>
-      <a href="listado-reservas.html" class="active">Reservas</a>
-    </nav>
-
-    <a
-      class="button button--outline header-cta"
-      href="index.html#reservas"
-    >
-      Nueva reserva
-    </a>
-
+    <span id="cantidad-resultados" class="results-count">
+      0 resultados
+    </span>
   </header>
 
-  <main class="reservations-page">
+  <main class="admin-main">
 
-    <div class="container">
+    <!-- Filtros -->
+    <nav class="reservation-filters" aria-label="Filtros de reservas">
 
-      <div class="reservations-heading">
-        <p class="eyebrow">Administración</p>
+      <button
+        type="button"
+        class="filter-button active"
+        data-estado="Todas"
+      >
+        Todas
+        <span id="cantidad-todas">0</span>
+      </button>
 
-        <h1>Listado de reservas</h1>
+      <button
+        type="button"
+        class="filter-button"
+        data-estado="Confirmada"
+      >
+        Confirmadas
+        <span id="cantidad-confirmadas">0</span>
+      </button>
 
-        <p>
-          Consultá las solicitudes recibidas y gestioná el estado
-          de cada reserva.
-        </p>
-      </div>
+      <button
+        type="button"
+        class="filter-button"
+        data-estado="Pendiente"
+      >
+        Pendientes
+        <span id="cantidad-pendientes">0</span>
+      </button>
 
-      <div class="reservations-summary">
+      <button
+        type="button"
+        class="filter-button"
+        data-estado="Rechazada"
+      >
+        Rechazadas
+        <span id="cantidad-rechazadas">0</span>
+      </button>
 
-        <p>
-          Reservas registradas:
-          <strong id="cantidad-reservas">0</strong>
-        </p>
+      <button
+        type="button"
+        class="filter-button"
+        data-estado="Cancelada"
+      >
+        Canceladas
+        <span id="cantidad-canceladas">0</span>
+      </button>
 
-        <a class="button button--gold" href="index.html#reservas">
-          Agregar reserva
+    </nav>
+
+    <!-- Tabla -->
+    <div class="reservations-table-container">
+
+      <table class="reservations-table">
+
+        <thead>
+          <tr>
+            <th>Nro. reserva</th>
+            <th>Estado</th>
+            <th>Huésped</th>
+            <th>Habitación</th>
+            <th>Check-in</th>
+            <th>Check-out</th>
+            <th>Noches</th>
+            <th>Total</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody id="tabla-reservas">
+          <!-- JavaScript agrega las reservas aquí -->
+        </tbody>
+
+      </table>
+
+      <div id="sin-reservas" class="empty-message">
+        <h2>No existen reservas</h2>
+        <p>No hay reservas para mostrar en esta categoría.</p>
+
+        <a href="index.html#reservas" class="button button--gold">
+          Crear una reserva
         </a>
-
       </div>
 
-      <!-- Aquí se mostrarán las reservas -->
-      <section
-        id="lista-reservas"
-        class="reservations-list"
-        aria-live="polite"
-      ></section>
+    </div>
+
+    <div class="table-footer">
+
+      <p id="texto-resultados">
+        Mostrando 0 reservas
+      </p>
+
+      <a href="index.html" class="back-link">
+        ← Volver al hotel
+      </a>
 
     </div>
 
   </main>
-
-  <footer class="site-footer">
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div class="footer-column">
-
-          <a class="brand" href="index.html">
-            <span class="brand__mark" aria-hidden="true">⌁</span>
-
-            <span>
-              <strong>Las Gaviotas</strong>
-              <small>Hotel &amp; Spa</small>
-            </span>
-          </a>
-
-          <p>
-            Un refugio frente al Atlántico pensado para descansar.
-          </p>
-
-        </div>
-
-        <div class="footer-column">
-          <h3>Contacto</h3>
-          <p>099 123 456</p>
-          <p>+598 99 123 456</p>
-          <p>contacto@lasgaviotas.com</p>
-        </div>
-
-        <div class="footer-column">
-          <h3>Ubicación</h3>
-          <p>Rambla 1234</p>
-          <p>Montevideo, Uruguay</p>
-        </div>
-
-        <div class="footer-column">
-          <h3>Horarios</h3>
-          <p>Recepción: 24 horas</p>
-          <p>Administración: 09:00–18:00</p>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Hotel Las Gaviotas. Sitio demostrativo.</p>
-        <a href="index.html">Volver al inicio ↑</a>
-      </div>
-
-    </div>
-
-  </footer>
 
 </body>
 </html>
