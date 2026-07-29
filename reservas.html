@@ -1,11 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Administración de reservas del Hotel Las Gaviotas."
+  >
+
+  <title>Listado de reservas | Hotel Las Gaviotas</title>
+
+  <!-- CSS general de la página -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS exclusivo del listado -->
+  <link rel="stylesheet" href="reservas.css">
 </head>
+
 <body>
-    Aca las reservas
+
+  <header class="site-header">
+
+    <a class="brand" href="index.html" aria-label="Ir al inicio">
+      <span class="brand__mark" aria-hidden="true">⌁</span>
+
+      <span>
+        <strong>Las Gaviotas</strong>
+        <small>Hotel &amp; Spa</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#habitaciones">Habitaciones</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#galeria">Galería</a>
+      <a href="listado-reservas.html" class="active">Reservas</a>
+    </nav>
+
+    <a
+      class="button button--outline header-cta"
+      href="index.html#reservas"
+    >
+      Nueva reserva
+    </a>
+
+  </header>
+
+  <main class="reservations-page">
+
+    <div class="container">
+
+      <div class="reservations-heading">
+        <p class="eyebrow">Administración</p>
+
+        <h1>Listado de reservas</h1>
+
+        <p>
+          Consultá las solicitudes recibidas y gestioná el estado
+          de cada reserva.
+        </p>
+      </div>
+
+      <div class="reservations-summary">
+
+        <p>
+          Reservas registradas:
+          <strong id="cantidad-reservas">0</strong>
+        </p>
+
+        <a class="button button--gold" href="index.html#reservas">
+          Agregar reserva
+        </a>
+
+      </div>
+
+      <!-- Aquí se mostrarán las reservas -->
+      <section
+        id="lista-reservas"
+        class="reservations-list"
+        aria-live="polite"
+      ></section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-column">
+
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true">⌁</span>
+
+            <span>
+              <strong>Las Gaviotas</strong>
+              <small>Hotel &amp; Spa</small>
+            </span>
+          </a>
+
+          <p>
+            Un refugio frente al Atlántico pensado para descansar.
+          </p>
+
+        </div>
+
+        <div class="footer-column">
+          <h3>Contacto</h3>
+          <p>099 123 456</p>
+          <p>+598 99 123 456</p>
+          <p>contacto@lasgaviotas.com</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Ubicación</h3>
+          <p>Rambla 1234</p>
+          <p>Montevideo, Uruguay</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Horarios</h3>
+          <p>Recepción: 24 horas</p>
+          <p>Administración: 09:00–18:00</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Hotel Las Gaviotas. Sitio demostrativo.</p>
+        <a href="index.html">Volver al inicio ↑</a>
+      </div>
+
+    </div>
+
+  </footer>
+
 </body>
 </html>
