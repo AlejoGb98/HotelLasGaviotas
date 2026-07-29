@@ -108,7 +108,7 @@ h3 {
 }
 
 .brand__mark {
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1;
   transform: rotate(-8deg);
 }
@@ -283,13 +283,11 @@ h3 {
 
 .hero__logo {
   display: grid;
-  width: 90px;
+  width: 120px;
   height: 90px;
-  margin: 0 auto 28px;
-  border: 1px solid rgba(213, 161, 76, 0.55);
+  margin: 0 auto 24px;
   color: var(--gold);
-  font-size: 3rem;
-  place-items: center;
+  font-size: 5rem;
 }
 
 .eyebrow {
