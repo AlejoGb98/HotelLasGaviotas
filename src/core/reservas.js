@@ -8,88 +8,117 @@ if (reservasGuardadas != null) {
   reservas = JSON.parse(reservasGuardadas);
 }
 
-if(formulario){
+if (formulario) {
   formulario.addEventListener("submit", function (evento) {
-  evento.preventDefault();
-  
+    evento.preventDefault();
+
     if (formulario.checkValidity() == false) {
       formulario.reportValidity();
       return;
     }
-  
-    crearReserva(formulario);
-  
-    formulario.reset();
+
+    var datosReserva = {
+      nombre: formulario.elements["nombre"].value,
+      telefono: formulario.elements["telefono"].value,
+      correo: formulario.elements["correo"].value,
+      llegada: formulario.elements["llegada"].value,
+      salida: formulario.elements["salida"].value,
+      habitacion: formulario.elements["habitacion"].value,
+      personas: formulario.elements["personas"].value,
+      observaciones: formulario.elements["observaciones"].value
+    };
+
+    var reservaCreada = crearReserva(datosReserva);
+
+    if (reservaCreada != null) {
+      alert(
+        "Reserva registrada correctamente. Número de reserva: " +
+        reservaCreada.id
+      );
+
+      formulario.reset();
+    }
   });
 }
 
-function crearReserva(formulario){
-    /* var nombre = formulario.elements["nombre"].value;
-    var telefono = formulario.elements["telefono"].value;
-    var correo = formulario.elements["correo"].value;
-    var llegada = formulario.elements["llegada"].value;
-    var salida = formulario.elements["salida"].value;
-    var habitacion = formulario.elements["habitacion"].value;
-    var personas = formulario.elements["personas"].value;
-    var observaciones = formulario.elements["observaciones"].value; */
-    console.log(formulario);
+function crearReserva(datos) {
+  var reserva = {
+    id: reservas.length + 1,
+    nombre: datos.nombre,
+    telefono: datos.telefono,
+    correo: datos.correo,
+    llegada: datos.llegada,
+    salida: datos.salida,
+    habitacion: datos.habitacion,
+    personas: datos.personas,
+    observaciones: datos.observaciones,
+    estado: "Pendiente"
+  };
 
-    var nombre = formulario.nombre;
-    var telefono = formulario.telefono;
-    var correo = formulario.correo;
-    var llegada = formulario.llegada;
-    var salida = formulario.salida;
-    var habitacion = formulario.habitacion;
-    var personas = formulario.personas;
-    var observaciones = formulario.observaciones;
+  if (!validarMail(reserva.correo)) {
+    alert("El correo electrónico no es válido.");
+    return null;
+  }
 
-    var reserva = {
-      id: reservas.length + 1,
-      nombre: nombre,
-      telefono: telefono,
-      correo: correo,
-      llegada: llegada,
-      salida: salida,
-      habitacion: habitacion,
-      personas: personas,
-      observaciones: observaciones,
-      estado: "Pendiente"
-    };
-    
-    if(validarMail(reserva.correo) && validarFechas(reserva.llegada, reserva.salida)){
-      agregarReserva(reserva);
-    }
+  if (!validarFechas(reserva.llegada, reserva.salida)) {
+    alert("Las fechas ingresadas no son válidas.");
+    return null;
+  }
 
+  agregarReserva(reserva);
+
+  return reserva;
 }
 
-function validarMail(correo){
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function validarMail(correo) {
+  if (correo == null || correo == "") {
+    return false;
+  }
+
+  var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   return regex.test(correo);
 }
 
-function validarFechas(fechaLlegada, fechaSalida){
-  const fecha = new Date().toISOString().split('T')[0];
+function validarFechas(fechaLlegada, fechaSalida) {
+  if (
+    fechaLlegada == null ||
+    fechaSalida == null ||
+    fechaLlegada == "" ||
+    fechaSalida == ""
+  ) {
+    return false;
+  }
 
-  if(fechaSalida <= fechaLlegada) return false;
+  var hoy = new Date();
+  var anio = hoy.getFullYear();
+  var mes = String(hoy.getMonth() + 1).padStart(2, "0");
+  var dia = String(hoy.getDate()).padStart(2, "0");
+  var fechaActual = anio + "-" + mes + "-" + dia;
 
-   if(fechaSalida == null || fechaLlegada == null) return false;
+  if (fechaSalida <= fechaLlegada) {
+    return false;
+  }
 
-   if(fechaLlegada <= fecha || fechaSalida <= fecha) return false;
+  if (fechaLlegada <= fechaActual || fechaSalida <= fechaActual) {
+    return false;
+  }
 
-   return true;
+  return true;
 }
 
-function agregarReserva(reserva){
-    reservas.push(reserva)
-    localStorage.setItem("reservas", JSON.stringify(reservas));
+function agregarReserva(reserva) {
+  reservas.push(reserva);
 
-    /* alert(
-      "Reserva registrada correctamente. Número de reserva: " + reserva.id
-    ); */
+  localStorage.setItem("reservas", JSON.stringify(reservas));
 }
 
-
- if (typeof module !== "undefined") {
-  module.exports = {reservas, crearReserva, validarMail, validarFechas, agregarReserva};
- }
- 
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    reservas,
+    crearReserva,
+    validarMail,
+    validarFechas,
+    agregarReserva
+  };
+}
