@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Acceso administrativo | Las Gaviotas</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Administración</p>
+        <h1>Ingreso de administrador</h1>
+        <p>Ingresá tus credenciales para gestionar las reservas.</p>
+      </div>
+
+      <form class="booking-form" id="form-login">
+        <label>
+          Usuario
+          <input
+            type="text"
+            id="usuario"
+            name="usuario"
+            required
+          >
+        </label>
+
+        <label>
+          Contraseña
+          <input
+            type="password"
+            id="clave"
+            name="clave"
+            required
+          >
+        </label>
+
+        <button class="button button--gold" type="submit">
+          Ingresar
+        </button>
+
+        <p id="mensaje-login"></p>
+      </form>
+
+      <a class="button button--outline" href="./index.html">
+        Volver al sitio
+      </a>
+    </div>
+  </main>
+
+  <script src="./src/core/administradores.js"></script>
+</body>
+</html>
