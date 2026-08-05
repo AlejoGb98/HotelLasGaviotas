@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="reservas.css">
 
-  <script src="/src/core/listado-reservas.js" defer></script>
+  <script src="./src/core/admin-guard.js"></script>
+  <script src="./src/core/listado-reservas.js" defer></script>
 </head>
 
 <body class="admin-page">
@@ -24,14 +25,23 @@
       <strong>Listado de Reservas</strong>
     </a>
 
-    <span id="cantidad-resultados" class="results-count">
-      0 resultados
-    </span>
+    <div class="admin-session">
+      <span class="admin-session__user">
+        Sesión: <strong id="nombre-administrador">Administrador</strong>
+      </span>
+
+      <span id="cantidad-resultados" class="results-count">
+        0 resultados
+      </span>
+
+      <button id="cerrar-sesion" class="button button--outline admin-logout" type="button">
+        Cerrar sesión
+      </button>
+    </div>
   </header>
 
   <main class="admin-main">
 
-    <!-- Filtros -->
     <nav class="reservation-filters" aria-label="Filtros de reservas">
 
       <button
@@ -101,7 +111,6 @@
         </thead>
 
         <tbody id="tabla-reservas">
-          <!-- JavaScript agrega las reservas aquí -->
         </tbody>
 
       </table>
