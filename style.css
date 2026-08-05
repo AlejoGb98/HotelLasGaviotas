@@ -325,6 +325,12 @@ h3 {
   background: var(--navy-950);
 }
 
+.header-actions{
+  display: flex;
+  gap: 12px;
+  margin-left: 16px;
+}
+
 .section--alternate {
   border-block: 1px solid var(--panel-line);
   background: var(--navy-950);
@@ -673,6 +679,12 @@ blockquote cite {
   grid-template-columns: minmax(0, 2fr) minmax(270px, 0.8fr);
   align-items: start;
   gap: 30px;
+}
+
+.booking-form{
+  display: flex;
+  flex-direction: column;
+  gap: 12px
 }
 
 .booking-form fieldset {

@@ -16,6 +16,12 @@ var administradoresPrecargados = [
     nombre: "Fernando",
     usuario: "fernando",
     clave: "fernando123"
+  },
+  {
+    id: 4,
+    nombre: "Carolina",
+    usuario: "admin",
+    clave: "hotel"
   }
 ];
 
